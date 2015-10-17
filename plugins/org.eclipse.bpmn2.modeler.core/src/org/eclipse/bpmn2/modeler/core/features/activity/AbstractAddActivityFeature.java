@@ -73,7 +73,7 @@ public abstract class AbstractAddActivityFeature<T extends Activity>
 		
 		GraphicsAlgorithm targetAlgorithm = context.getTargetContainer().getGraphicsAlgorithm();
 		
-		if (targetAlgorithm != null) {
+		if (targetAlgorithm != null && !(targetAlgorithm instanceof Rectangle)) {
 			width = Math.min(targetAlgorithm.getWidth(), width);
 			height = Math.min(targetAlgorithm.getHeight(), height);
 		}
